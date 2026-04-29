@@ -1,16 +1,20 @@
-# React + Vit
+![Logo do Papa da Wal](https://img.shields.io/badge/Papa%20da%20Wal-Sa%C3%BAde%20e%20Sabor-2E7D32?style=for-the-badge)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🥗 Papa da Wal - Versão em React
 
-Currently, two official plugins are available:
+O **Papa da Wal** é um serviço de entrega de marmitas e produtos saudáveis com sede em Bragança Paulista. Focado em praticidade e personalização, seu objetivo é transformar dietas em refeições frescas e saborosas.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Esta versão do projeto representa a evolução técnica da nossa plataforma, migrando de uma estrutura estática para uma Single Page Application (SPA) moderna e performática. Isso ainda está em execução.
 
-## React Compiler
+# ✨ O que vai mudar?
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+O objetivo é sairmos de arquivos HTML isolados para uma arquitetura baseada em Componentes Reutilizáveis. Isso garantirá maior fluidez à experiência do usuário, sem recarregamentos de página desnecessários.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# 🚀 Tecnologias Utilizadas
+- React
+- Vite
+- Javascript
+- CSS Modules
