@@ -38,7 +38,7 @@
 }
 
 .stepCard {
-    background: var(--white);
+    background: #f0ffec;
     padding: 40px 30px;
     border-radius: 15px;
     box-shadow: var(--shadow);
