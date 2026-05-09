@@ -5,6 +5,9 @@ import { IoIosText } from "react-icons/io";
 import { MdDeliveryDining } from "react-icons/md";
 import { GiKnifeFork } from "react-icons/gi";
 
+//Componentes
+import Envio from '../Envio/Envio';
+
 function Main() {
     return (
         <main className={styles.main}>
@@ -47,6 +50,9 @@ function Main() {
                         Se delicie com uma marmita fresca, saudável e ideal para sua rotina!
                     </p>
                 </div>
+            </div>
+            <div>
+                <Envio/>
             </div>
         </main>
     )

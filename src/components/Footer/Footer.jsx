@@ -1,5 +1,8 @@
 import styles from '../Footer/styles.module.css'
 
+//Router para Links e navegação de pagina
+import { Link } from 'react-router-dom';
+
 //Importe de Icones dnv
 import { FaHome } from "react-icons/fa";
 import { GiKnifeFork } from "react-icons/gi";
@@ -8,7 +11,7 @@ import { FaWhatsapp } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
 
 function Footer() {
-  return (
+  return (  
     <footer className={styles["site-footer"]}>
       <div className={styles["footer-container"]}>
 
@@ -23,13 +26,14 @@ function Footer() {
           <h3>Acesso Rápido</h3>
           <ul className={styles["footer-links"]}>
             <li>
-              <a href="index.html"><FaHome /> Página Inicial</a>
+              <Link to="/"><FaHome /> Página Inicial</Link>
             </li>
             <li>
-              <a href="produtos.html"><GiKnifeFork /> Produtos</a>
+              <Link to="/produtos"><GiKnifeFork /> Produtos</Link>
+              
             </li>
             <li>
-              <a href="sobre.html"><FaComment /> Sobre</a>
+              <Link to="/sobre"><FaComment /> Sobre</Link>
             </li>
           </ul>
         </div>

@@ -1,0 +1,23 @@
+.atalho_produtos {
+    background-color: var(--primary-color);
+    margin-top: 50px;
+    height: 40px;
+    width: auto;
+    font-size: 25px;
+    padding: 12px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.atalho_produtos:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border-bottom: 5px solid var(--accent-color);
+}
+
+.botao_atalho {
+    flex: auto;
+    align-content: center;
+    justify-content: center;
+    height: 100px;
+}

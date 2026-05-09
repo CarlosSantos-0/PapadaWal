@@ -1,5 +1,9 @@
 import styles from './styles.module.css'
 
+
+//Router
+import { Link } from 'react-router-dom';
+
 //Importe icones aqui
 import { FaRegUserCircle } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
@@ -11,15 +15,15 @@ function Toolbar() {
       <div>
         <ul className={styles.noBullets}>
           <li>
-            <a href="index.html">
-                <PiFlowerLotusBold size={50}/>
-            </a>
+            <Link to="/">
+              <PiFlowerLotusBold size={50}/>
+            </Link>
           </li>
           <li>
-            <a href="index.html">Página inicial</a>
+            <Link to="/">Página inicial</Link>
           </li>
           <li>
-            <a href="produtos.html">Produtos</a>
+            <Link to="/produtos">Produtos</Link>
           </li>
         </ul>
       </div>
@@ -36,17 +40,17 @@ function Toolbar() {
             />
           </li>
           <li>
-            <a href="sobre.html">Sobre</a>
+            <Link to="/sobre">Sobre</Link>
           </li>
           <li>
-            <a id="btn-user">
+            <Link to="/log-in" id="btn-user">
               <FaRegUserCircle size={25}/>
-            </a>
+            </Link>
           </li>
           <li>
-            <a id="btn-cart">
+            <Link to="/carrinho" id="btn-cart">
               <FaShoppingCart size={25}/>
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
