@@ -35,6 +35,7 @@
 .footer-links,
 .social-links {
     list-style: none;
+    padding: 0px;
 }
 
 .footer-links li,
@@ -45,18 +46,23 @@
 /* Links */
 .footer-links a,
 .social-links a {
+    display: flex;          
+    align-items: center;   
+    gap: 8px;              
     color: #ddd;
     font-size: 0.9rem;
     padding: 0;
-    transition: color 0.3s;
+    text-decoration: none;  
+    transition: color 0.3s, transform 0.3s;
+    width: fit-content;     
 }
+
 
 .footer-links a:hover,
 .social-links a:hover {
     color: var(--accent-color);
     background-color: transparent;
     transform: translateX(5px);
-    display: inline-block;
 }
 
 /* Ícones */

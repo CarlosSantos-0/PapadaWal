@@ -1,5 +1,10 @@
 import styles from './styles.module.css'
 
+//Importe icones aqui
+import { FaRegUserCircle } from "react-icons/fa";
+import { FaShoppingCart } from "react-icons/fa";
+import { PiFlowerLotusBold } from "react-icons/pi";
+
 function Toolbar() {
   return (
     <nav className={styles.navbar}>
@@ -7,7 +12,7 @@ function Toolbar() {
         <ul className={styles.noBullets}>
           <li>
             <a href="index.html">
-              <i className="fa-sharp-duotone fa-solid fa-spa"></i>
+                <PiFlowerLotusBold size={50}/>
             </a>
           </li>
           <li>
@@ -35,12 +40,12 @@ function Toolbar() {
           </li>
           <li>
             <a id="btn-user">
-              <i className="fa-regular fa-user"></i>
+              <FaRegUserCircle size={25}/>
             </a>
           </li>
           <li>
             <a id="btn-cart">
-              <i className="fa-solid fa-cart-shopping"></i>
+              <FaShoppingCart size={25}/>
             </a>
           </li>
         </ul>

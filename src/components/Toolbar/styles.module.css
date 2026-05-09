@@ -26,8 +26,15 @@
   gap: 25px;
 }
 
+.noBullets a{
+  align-self: center;
+}
+
 
 a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   color: var(--white);
   text-decoration: none;
   font-weight: 500;

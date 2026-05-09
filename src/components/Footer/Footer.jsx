@@ -1,5 +1,12 @@
 import styles from '../Footer/styles.module.css'
 
+//Importe de Icones dnv
+import { FaHome } from "react-icons/fa";
+import { GiKnifeFork } from "react-icons/gi";
+import { FaComment } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa";
+
 function Footer() {
   return (
     <footer className={styles["site-footer"]}>
@@ -16,13 +23,13 @@ function Footer() {
           <h3>Acesso Rápido</h3>
           <ul className={styles["footer-links"]}>
             <li>
-              <a href="index.html">Página Inicial</a>
+              <a href="index.html"><FaHome /> Página Inicial</a>
             </li>
             <li>
-              <a href="produtos.html">Produtos</a>
+              <a href="produtos.html"><GiKnifeFork /> Produtos</a>
             </li>
             <li>
-              <a href="sobre.html">Sobre</a>
+              <a href="sobre.html"><FaComment /> Sobre</a>
             </li>
           </ul>
         </div>
@@ -30,14 +37,16 @@ function Footer() {
         <div className={styles["footer-col"]}>
           <h3>Contatos</h3>
           <ul className={styles["social-links"]}>
-            <li>
+            <li className={styles.iconeRedes}>
               <a href="#" target="_blank" rel="noopener noreferrer">
-                <i className="fa-brands fa-whatsapp"></i> (11) 95769-7500
+                <FaWhatsapp size={24}/>
+                (11) 95769-7500
               </a>
             </li>
-            <li>
-              <a href="https://www.instagram.com/papadawall/" target="_blank" rel="noopener noreferrer">
-                <i className="fa-brands fa-instagram"></i> @papadawall
+            <li className={styles.iconeRedes}>
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <FaInstagram size={24}/>
+                @papadawall
               </a>
             </li>
           </ul>

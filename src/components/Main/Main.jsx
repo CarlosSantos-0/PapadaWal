@@ -1,5 +1,10 @@
 import styles from '../Main/styles.module.css'
 
+// Importe os icones aqui
+import { IoIosText } from "react-icons/io";
+import { MdDeliveryDining } from "react-icons/md";
+import { GiKnifeFork } from "react-icons/gi";
+
 function Main() {
     return (
         <main className={styles.main}>
@@ -15,7 +20,7 @@ function Main() {
             <div className={styles.stepsContainer}>
                 <div className={styles.stepCard}>
                     <div className={styles.iconCircle}>
-                        <i className="fa-solid fa-pen-to-square"></i>
+                        <i className="fa-solid fa-pen-to-square"><IoIosText/></i>
                     </div>
                     <h2>1. Faça seu Pedido</h2>
                     <p>
@@ -25,7 +30,7 @@ function Main() {
 
                 <div className={styles.stepCard}>
                     <div className={styles.iconCircle}>
-                        <i className="fa-solid fa-truck-fast"></i>
+                        <i className="fa-solid fa-truck-fast"> <MdDeliveryDining /> </i>
                     </div>
                     <h2>2. Entrega Rápida</h2>
                     <p>
@@ -35,7 +40,7 @@ function Main() {
 
                 <div className={styles.stepCard}>
                     <div className={styles.iconCircle}>
-                        <i className="fa-solid fa-utensils"></i>
+                        <i className="fa-solid fa-utensils"> <GiKnifeFork /> </i>
                     </div>
                     <h2>3. Aproveite</h2>
                     <p>
