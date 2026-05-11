@@ -1,0 +1,151 @@
+:root {
+    --primary-color: #1b3a2b;
+    --accent-color: #4CAF50;
+    --bg-color: #eaeceb;
+    --text-color: #333;
+    --white: #ffffff;
+    --shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.textosCarrinhos {
+    background-color: #1b3a2b;
+    padding: 30px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+.titulo {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.subTitulo {
+    color: rgba(255, 255, 255, 0.897);
+}
+
+.paginaCompras {
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 50px 80px;
+    justify-content: center;
+}
+
+.produtosCompras {
+    background-color: var(--white);
+    height: auto;
+    width: 500px;
+    border-radius: 15px;
+    padding: 25px;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+
+.contaCompras {
+    background-color: var(--white);
+    height: 300px; 
+    width: 304px;
+    border-radius: 15px; 
+    padding: 25px;       
+    box-shadow: var(--shadow);
+}
+
+.produtosCompras {
+    box-shadow: var(--shadow); 
+}
+
+.produtosCompras h1, .contaCompras h1 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    border-bottom: 1px solid #eaeceb;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+/* Lista de Produtos */
+.itemCarrinho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #f4f7f5;
+}
+
+.itemInfo {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.imgProduto {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    background-color: var(--bg-color); 
+}
+
+.itemTexto h4 {
+    margin: 0 0 5px 0;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.itemTexto p {
+    margin: 0;
+    color: #666;
+    font-size: 0.85rem;
+}
+
+.itemControles {
+    text-align: right;
+}
+
+.precoItem {
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.linhaResumo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.divisor {
+    border: 0;
+    height: 1px;
+    background: #eaeceb;
+    margin: 15px 0;
+}
+
+.total {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.btnFinalizar {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.btnFinalizar:hover {
+    background-color: var(--accent-color);
+}

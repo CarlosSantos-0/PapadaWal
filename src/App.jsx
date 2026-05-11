@@ -1,4 +1,5 @@
 import './App.css'
+import Carrinho from './components/Carrinho/Carinho'
 import Envio from './components/Envio/Envio'
 import Footer from './components/Footer/Footer'
 import Login from './components/Login/Login'
@@ -21,6 +22,7 @@ function App() {
         <Route path="/produtos" element={<Vitrine/>} />
         <Route path="/sobre" element={<h2>🚧 Sobre nós em breve...</h2>} />
         <Route path='/log-in' element={<Login/>}/>
+        <Route path='/carrinho' element={<Carrinho/>}/>
 
       </Routes>
       <Footer/>
