@@ -11,7 +11,10 @@ function Vitrine () {
     return (
         <>
             <div className={styles.vitrine}>
-                <h1 className={styles.titulo}>Encontre nossos produtos aqui</h1>
+                <div className={styles.textosVitrine}>
+                <h1 className={styles.titulo}>Nosso Cardápio</h1>
+                <h3 className={styles.subTitulo}>Escolha suas marmitas favoritas</h3>
+                </div>
                 <div className={styles.vitrine_marmitas}> 
                         <div className={styles.card_pacote}> 
                             <h3>Pacote Semanal</h3>
@@ -26,14 +29,15 @@ function Vitrine () {
                             <Link className={styles.botao_pedir}>Pedir</Link>
                         </div>
                 </div>
-                <hr />
+                <hr className={styles.separador}/>
                 {/* produtos */}
                 <div className={styles.vitrine_produtos}>
                     {vitrineDados.map((produto) => (
                         <div key={produto.id} className={styles.card_produto}>
 
-                        <h3 className={styles.nomeProduto}>{produto.nome}</h3>
+                        
                         <img src={produto.imagem} alt={produto.nome} className={styles.imagemProduto} />
+                        <h3 className={styles.nomeProduto}>{produto.nome}</h3>
                         <p className={styles.descricaoProduto}>{produto.descricao}</p>
 
                         <div className={styles.rodapeProduto}>

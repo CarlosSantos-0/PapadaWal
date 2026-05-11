@@ -1,0 +1,135 @@
+/* ===== TEMA ADAPTADO: PAPA DA WAL ===== */
+
+.container {
+    width: 450px;
+    /* Trocamos o vermelho pelo fundo branco em formato de card */
+    background-color: #d3d3d3; 
+    border: none; /* Removemos a borda transparente */
+    padding: 40px;
+    border-radius: 15px; /* Mesmo arredondamento dos stepCards */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Mesma sombra suave do tema principal */
+    margin: 40px auto; /* Para centralizar na tela */
+}
+
+.container h1 {
+    text-align: center;
+    font-size: 30px;
+    color: #1b3a2b; /* Usando sua --primary-color */
+    margin-bottom: 30px;
+}
+
+.container .inputField {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px auto;
+    display: flex;
+    gap: 80px;
+}
+
+.inputField input {
+    width: 500px;
+    height: 10px;
+    background-color: #f4f7f5; /* Usando sua --bg-color */
+    outline: none;
+    border: 2px solid transparent; /* Borda invisível que aparece no hover/focus */
+    border-radius: 40px;
+    font-size: 16px;
+    color: #333; /* --text-color */
+    padding: 20px 25px;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Dá um feedback visual verde quando o usuário clica para digitar */
+.inputField input:focus {
+    border-color: #4CAF50; /* --accent-color */
+    background-color: #ffffff;
+}
+
+.inputField input::placeholder {
+    color: #666; /* Cor do seu subtitle */
+}
+
+.inputField .icon {
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #1b3a2b; /* --primary-color */
+}
+
+.container .recallForget {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+}
+
+.recallForget label {
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espaço entre o checkbox e o texto */
+}
+
+.recallForget input {
+    accent-color: #4CAF50; /* Deixa o checkbox verdinho com a cara do site */
+    cursor: pointer;
+}
+
+.recallForget a {
+    color: #1b3a2b; /* --primary-color */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.recallForget a:hover {
+    color: #4CAF50; /* --accent-color no hover */
+}
+
+.container button {
+    width: 100%;
+    height: 45px;
+    background-color: #1b3a2b; /* --primary-color */
+    color: #ffffff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Efeito de interatividade no botão */
+.container button:hover {
+    background-color: #4CAF50; /* --accent-color */
+    transform: translateY(-2px); /* Dá uma leve levantadinha igual aos cards */
+}
+
+.container .signupLink {
+    font-size: 15px;
+    text-align: center;
+    margin: 20px 0 10px;
+    color: #555;
+}
+
+.signupLink p {
+    margin: 0;
+}
+
+.signupLink p a {
+    color: #1b3a2b; /* --primary-color */
+    font-weight: 600;
+    margin-left: 5px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.signupLink p a:hover {
+    color: #4CAF50; /* --accent-color */
+    text-decoration: underline;
+}
