@@ -26,6 +26,13 @@
     margin-bottom: 10px;
 }
 
+.titulo2 {
+    color: var(--primary-color);
+    font-family:sans-serif ;
+    margin-bottom: 10px;
+    align-self: center;
+}
+
 .subTitulo {
     color: rgba(255, 255, 255, 0.897);
     font-family:sans-serif ;
@@ -80,6 +87,7 @@
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 80px;
+    margin-top: 40px;
 }
 
 .card_produto {

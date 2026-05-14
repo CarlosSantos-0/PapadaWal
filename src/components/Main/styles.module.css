@@ -1,7 +1,7 @@
 :root {
     --primary-color: #1b3a2b;
     --accent-color: #4CAF50;
-    --bg-color: #f4f7f5;
+    --bg-color: #e8f5e9;
     --text-color: #333;
     --white: #ffffff;
     --shadow: 0 4px 15px rgba(0,0,0,0.05);
@@ -12,6 +12,67 @@
     margin: 0 auto;
     padding: 60px 20px;
     text-align: center;
+    background-color: #e8f5e9;
+}
+
+.letterBox {
+    background-color: #224735;
+    padding: 100px;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.letterText {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.letterBox h1 {
+    font-size: 4rem;
+    color: white;
+    justify-self: center;
+}
+
+.letterBox p {
+    font-size: 1.25rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.76);
+    justify-self: center;
+}
+
+.letterButton {
+    display: flex;
+    flex: content;
+    align-content: center;
+    flex-direction: row;
+    gap: 15px;
+    margin-top: 20px;
+    align-self: center;
+}
+
+.letterButton a {
+    background-color: #ffffff;
+    color: #1b3a2b;
+    border-radius: 30px;
+    padding: 20px;
+    height: 30px;
+    width: autp;
+    font-size:1.25rem;
+}
+
+.letterButton a:hover{
+    background-color: var(--accent-color);
+    color: #ffffff;
+    border-radius: 30px;
+    padding: 20px;
+    height: 30px;
+    width: autp;
+    font-size:1.25rem;
 }
 
 .heroSection {
@@ -78,4 +139,78 @@
 
 .titulo {
     margin-bottom: 30px;
+}
+
+/*novos cards*/
+
+.opcoesContainer {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 60px;
+    flex-wrap: wrap; 
+}
+
+.opcaoCard {
+    background-color: var(--white);
+    border-radius: 12px;
+    padding: 30px;
+    flex: 1;
+    min-width: 300px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    border: 1px solid #eaeceb;
+}
+
+.opcaoHeader {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.opcaoIcon {
+    width: 45px;
+    height: 45px;
+    background-color: #e8f5e9;
+    color: var(--accent-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.opcaoCard h3 {
+    font-size: 1.3rem;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.opcaoCard p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.opcaoCard p strong {
+    color: var(--accent-color);
+}
+
+.opcaoBtn {
+    background-color: var(--accent-color);
+    color: var(--white);
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    align-self: flex-start;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.opcaoBtn:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
 }
