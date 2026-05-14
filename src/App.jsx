@@ -20,7 +20,7 @@ function App() {
 
         <Route path='/' element={<Main/>}/>
         <Route path="/produtos" element={<Vitrine/>} />
-        <Route path="/sobre" element={<h2>🚧 Sobre nós em breve...</h2>} />
+        <Route path="/sobre" element={<h2> Sobre nós em breve...</h2>} />
         <Route path='/log-in' element={<Login/>}/>
         <Route path='/carrinho' element={<Carrinho/>}/>
 
