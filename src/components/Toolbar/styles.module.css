@@ -4,7 +4,9 @@
   --white: #ffffff;
 }
 
-
+/* ========================================= */
+/* --- ESTRUTURA PRINCIPAL --- */
+/* ========================================= */
 .navbar {
   display: flex;
   flex-direction: row;
@@ -18,20 +20,17 @@
   z-index: 1000;
 }
 
-
 .noBullets {
   list-style-type: none;
   display: flex;
   align-items: center;
   gap: 25px;
+  margin: 0; /* FIX 1: Zera a margem invisível do navegador */
+  padding: 0; /* FIX 2: Zera o recuo que deixava o menu torto no celular */
 }
 
-.noBullets a{
-  align-self: center;
-}
-
-
-a {
+/* FIX 3: Agora os links só ganham esse estilo SE estiverem dentro do menu */
+.noBullets a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -44,21 +43,21 @@ a {
   cursor: pointer;
 }
 
-
-.navbar a:hover {
+.noBullets a:hover {
   color: var(--primary-color);
   background-color: var(--white);
   transform: translateY(-2px);
 }
-
 
 .navbar .fa-spa {
   font-size: 1.5rem;
   color: var(--accent-color);
 }
 
-
-#search {
+/* ========================================= */
+/* --- BARRA DE PESQUISA --- */
+/* ========================================= */
+.search {
   padding: 8px 15px;
   border-radius: 20px;
   border: none;
@@ -67,48 +66,41 @@ a {
   background-color: rgba(255,255,255,0.15);
   color: white;
   transition: 0.3s;
+  width: 150px; /* Largura base no PC */
 }
 
-#search::placeholder {
+.search::placeholder {
   color: rgba(255,255,255,0.7);
 }
 
-#search:focus {
+.search:focus {
   background-color: white;
   color: var(--primary-color);
   width: 200px;
 }
 
-
+/* ========================================= */
+/* --- RESPONSIVIDADE (CELULARES) --- */
+/* ========================================= */
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: column;
+    flex-direction: column; /* Empilha: Logo -> Links -> Pesquisa */
     gap: 15px;
+    padding: 15px 20px;
   }
 
   .noBullets {
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center; /* Agora eles ficam perfeitamente centralizados */
+    gap: 10px; /* Diminui o buraco entre os botões para caber mais na tela */
   }
-}
 
-.search {
-    padding: 8px 15px;
-    border-radius: 20px;
-    border: none;
-    outline: none;
-    font-size: 0.9rem;
-    background-color: rgba(255,255,255,0.15);
-    color: white;
-    transition: 0.3s;
-}
-
-.search::placeholder {
-    color: rgba(255,255,255,0.7);
-}
-
-.search:focus {
-    background-color: white;
-    color: var(--primary-color);
-    width: 200px;
+  .search {
+    width: 100%; /* Faz a barra usar o espaço disponível sem estourar a tela */
+    max-width: 300px; /* Limite para não ficar feia num tablet */
+  }
+  
+  .search:focus {
+    width: 100%; /* No celular, impede que ela tente virar 200px e quebre a página */
+  }
 }

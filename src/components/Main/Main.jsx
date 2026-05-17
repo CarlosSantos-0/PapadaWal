@@ -5,17 +5,19 @@ import { IoIosText } from "react-icons/io";
 import { MdDeliveryDining } from "react-icons/md";
 import { GiKnifeFork } from "react-icons/gi";
 import { FaRegClock, FaBox } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
 
 //Componentes
 import Envio from '../Envio/Envio';
 
 //Router
 import { Link } from 'react-router-dom';
+import { WhatsApp } from '@mui/icons-material';
 
 function Main() {
     return (
         <>
-        <div className={styles.letterBox}>
+        { /*<div className={styles.letterBox}>
                 <div className={styles.letterText}>
                 <h1>Marmitas Saudáveis Feitas com Amor</h1>
                 <p>Escolha entre nossos deliciosos kits prontos ou personalize sua dieta com ingredientes frescos e selecionados</p>
@@ -24,7 +26,7 @@ function Main() {
                     <Link to='/produtos'>Ver Cardapio</Link>
                     <Link to='/marmita'>Montar Marmita</Link>
                 </div>
-        </div>
+        </div>*/}
 
         
         
@@ -39,6 +41,23 @@ function Main() {
             </div>
 
             <div className={styles.opcoesContainer}>
+
+                <div className={styles.opcaoCard2}> 
+                    <div className={styles.opcaoHeader}>
+                        <div className={styles.opcaoIcon}>
+                            <FaBox size={20} />
+                        </div>
+                        <h3>Marmitas Personalizadas</h3>
+                    </div>
+                    <p>
+                        Envie sua dieta e receba 7 marmitas preparadas especialmente para você. Ingredientes frescos, selecionados diariamente e montados de acordo com suas necessidades nutricionais.
+                    </p>
+                    <div className={styles.opcaoBtn}>
+                        <FaWhatsapp size={30}/>
+                        <Link to="https://api.whatsapp.com/send/?phone=5511999999999&text=Ol%EF%BF%BD%21+Gostaria+de+solicitar+um+or%EF%BF%BDamento+para+marmitas+personalizadas.&type=phone_number&app_absent=0" >Solicitar Via WhatsApp</Link>
+                    </div>
+                </div>
+
                 <div className={styles.opcaoCard}>
                     <div className={styles.opcaoHeader}>
                         <div className={styles.opcaoIcon}>
@@ -53,54 +72,40 @@ function Main() {
                 </div>
 
                
-                <div className={styles.opcaoCard}> 
-                    <div className={styles.opcaoHeader}>
-                        <div className={styles.opcaoIcon}>
-                            <FaBox size={20} />
-                        </div>
-                        <h3>Marmitas Personalizadas</h3>
-                    </div>
-                    <p>
-                        Envie sua dieta e receba <strong>7 marmitas</strong> preparadas especialmente para você.
-                    </p>
-                    <Link to="/marmita" className={styles.opcaoBtn}>Personalizar</Link>
-                </div>
+                
 
             </div>
 
             <div className={styles.stepsContainer}>
                 <div className={styles.stepCard}>
                     <div className={styles.iconCircle}>
-                        <i className="fa-solid fa-pen-to-square"><IoIosText/></i>
+                        <i className="fa-solid fa-pen-to-square"><IoIosText className={styles.icone}/></i>
                     </div>
                     <h2>1. Faça seu Pedido</h2>
                     <p>
-                        Envie para nós sua dieta feita por um nutricionista ou monte você mesmo.
+                        Escolha entre itens prontos ou entre em contato para marmitas personalizadas
                     </p>
                 </div>
 
                 <div className={styles.stepCard}>
                     <div className={styles.iconCircle}>
-                        <i className="fa-solid fa-truck-fast"> <MdDeliveryDining /> </i>
+                        <i className="fa-solid fa-truck-fast"> <GiKnifeFork className={styles.icone}/>  </i>
                     </div>
-                    <h2>2. Entrega Rápida</h2>
+                    <h2>2. Preparamos com Carinho</h2>
                     <p>
-                        Entregas realizadas por toda a região de Bragança. Receba toda semana ou mês.
+                        Ingredientes frescos selecionados diariamente
                     </p>
                 </div>
 
                 <div className={styles.stepCard}>
                     <div className={styles.iconCircle}>
-                        <i className="fa-solid fa-utensils"> <GiKnifeFork /> </i>
+                        <i className="fa-solid fa-utensils"><MdDeliveryDining className={styles.icone}/> </i>
                     </div>
-                    <h2>3. Aproveite</h2>
+                    <h2>3. Entrega Rápida</h2>
                     <p>
-                        Se delicie com uma marmita fresca, saudável e ideal para sua rotina!
+                        Receba em casa fresquinho e pronto
                     </p>
                 </div>
-            </div>
-            <div>
-                <Envio/>
             </div>
         </div>
         </>

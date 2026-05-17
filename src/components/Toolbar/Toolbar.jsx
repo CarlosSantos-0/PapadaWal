@@ -20,28 +20,16 @@ function Toolbar() {
             </Link>
           </li>
           <li>
-            <Link to="/">Página inicial</Link>
+            <Link to="/produtos">Produtos</Link>
           </li>
           <li>
-            <Link to="/produtos">Produtos</Link>
+            <Link to="/sobre">Sobre Nós</Link>
           </li>
         </ul>
       </div>
 
       <div>
         <ul className={styles.noBullets}>
-          <li>
-            <input
-              type="text"
-              name="search"
-              id="search"
-              placeholder="Buscar..."
-              className={styles.search}
-            />
-          </li>
-          <li>
-            <Link to="/sobre">Sobre</Link>
-          </li>
           <li>
             <Link to="/log-in" id="btn-user">
               <FaRegUserCircle size={25}/>

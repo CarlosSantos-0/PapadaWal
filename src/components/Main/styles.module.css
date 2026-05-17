@@ -61,7 +61,7 @@
     border-radius: 30px;
     padding: 20px;
     height: 30px;
-    width: autp;
+    width: auto;
     font-size:1.25rem;
 }
 
@@ -99,10 +99,9 @@
 }
 
 .stepCard {
-    background: #f0ffec;
+    background: #e8f5e9;
     padding: 40px 30px;
-    border-radius: 15px;
-    box-shadow: var(--shadow);
+    border-radius: 15px;;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-bottom: 5px solid transparent;
 }
@@ -116,7 +115,7 @@
 .iconCircle {
     width: 60px;
     height: 60px;
-    background-color: #e8f5e9;
+    background-color: var(--accent-color);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -124,6 +123,10 @@
     margin: 0 auto 20px auto;
     color: var(--primary-color);
     font-size: 1.5rem;
+}
+
+.icone {
+    color: white;
 }
 
 .stepCard h2 {
@@ -164,6 +167,20 @@
     border: 1px solid #eaeceb;
 }
 
+.opcaoCard2 {
+    background-color: #e8f5e9; 
+    border-radius: 12px;
+    padding: 30px;
+    flex: 1.5;
+    min-width: 300px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    border: 1px solid #a5d6a7;
+}
+
+
 .opcaoHeader {
     display: flex;
     align-items: center;
@@ -200,17 +217,75 @@
 }
 
 .opcaoBtn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     background-color: var(--accent-color);
     color: var(--white);
     text-decoration: none;
     padding: 12px 25px;
-    border-radius: 8px;
+    border-radius: 30px;
     font-weight: bold;
     align-self: flex-start;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: auto;
 }
+
 
 .opcaoBtn:hover {
     background-color: var(--primary-color);
     transform: translateY(-2px);
+}
+
+.opcaoCard h3, .opcaoCard2 h3 {
+    font-size: 1.3rem;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.opcaoCard p, .opcaoCard2 p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.opcaoCard p strong, .opcaoCard2 p strong {
+    color: var(--accent-color);
+}
+
+/* REPONSIVIDADE */
+
+@media (max-width: 768px) {
+    
+    .letterBox {
+        padding: 50px 20px; 
+        gap: 20px;
+    }
+
+    .letterBox h1 {
+        font-size: 2.2rem; 
+    }
+
+    .letterBox p {
+        font-size: 1rem;
+    }
+
+  
+    .letterButton {
+        flex-direction: column; 
+        width: 100%; 
+        gap: 15px;
+    }
+
+    .letterButton a, .letterButton a:hover {
+        width: 100%; 
+        text-align: center;
+        height: auto; 
+    }
+
+    .heroSection h1 {
+        font-size: 2rem;
+    }
+    
 }
