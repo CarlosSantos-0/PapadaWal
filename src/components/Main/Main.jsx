@@ -12,7 +12,6 @@ import Envio from '../Envio/Envio';
 
 //Router
 import { Link } from 'react-router-dom';
-import { WhatsApp } from '@mui/icons-material';
 
 function Main() {
     return (
