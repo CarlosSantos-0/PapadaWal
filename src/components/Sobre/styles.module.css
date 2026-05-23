@@ -1,0 +1,153 @@
+:root {
+  --tamanho-font: 16px; 
+  --primary-color: #1b3a2b;
+  --accent-color: #4CAF50;
+  --bg-color: #e8f5e9;
+  --text-color: #333;
+  --white: #ffffff;
+  --shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+/* --- ESTRUTURA PRINCIPAL --- */   
+
+.sobre {
+  width: 100%;
+  min-height: 100vh;
+  padding: 50px 80px;
+  background-color: #e9e9e9;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; 
+  gap: 40px;
+  width: 100%;
+  max-width: 1200px; 
+}
+
+.container2 {
+  display: flex;
+  flex-direction: column;
+  flex: 1.8; 
+}
+
+/* --- TEXTOS --- */
+
+.texto {
+  flex: 1;
+}
+
+.texto h1 {
+  font-size: 60px; 
+  color: #2e7d32;
+  margin-bottom: 20px;
+}
+
+.texto p {
+  font-size: 17px; 
+  line-height: 1.6;
+  color: #333;
+  text-align: left; 
+}
+
+/* --- CARDS --- */
+
+.cards {
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.card {
+  background: white;
+  width: 100%; 
+  min-height: auto;
+  padding: 25px 20px; 
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.card h2 {
+  color: #2e7d32;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.card p {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.6;
+  text-align: left;
+}
+
+/* --- IMAGEM --- */
+
+.imagem {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; 
+}
+
+.imagem img {
+  width: 100%;
+  max-width: 450px; 
+  filter: drop-shadow(0px 15px 20px rgba(0, 0, 0, 0.15)); 
+}
+
+
+/* --- RESPONSIVIDADE --- */
+
+@media (max-width: 768px) {
+  
+  .sobre {
+    padding: 40px 20px; 
+  }
+
+  .container {
+    flex-direction: column; 
+    align-items: center;
+  }
+
+  .texto h1 {
+    font-size: 38px; 
+    text-align: center; 
+    margin-bottom: 20px;
+  }
+
+  .texto p {
+    font-size: 16px; 
+    text-align: center; 
+  }
+
+  .cards {
+    grid-template-columns: 1fr; 
+    width: 100%;
+  }
+
+  .card {
+    width: 100%; 
+  }
+
+  .imagem {
+    margin-top: 30px;
+    width: 100%;
+  }
+}

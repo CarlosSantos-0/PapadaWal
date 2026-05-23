@@ -12,7 +12,7 @@
     margin: 0 auto;
     padding: 60px 20px;
     text-align: center;
-    background-color: #e8f5e9;
+    background-color: var(--bg-color);
 }
 
 .letterBox {
@@ -222,6 +222,7 @@
     align-items: center;
     background-color: var(--accent-color);
     color: var(--white);
+    gap: 5px;
     text-decoration: none;
     padding: 12px 25px;
     border-radius: 30px;
@@ -252,6 +253,10 @@
 
 .opcaoCard p strong, .opcaoCard2 p strong {
     color: var(--accent-color);
+}
+    
+a {
+    color: white;
 }
 
 /* REPONSIVIDADE */
