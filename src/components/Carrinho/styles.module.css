@@ -12,7 +12,7 @@
     padding: 30px 60px;
     display: flex;
     flex-direction: column;
-    gap: 0px;
+    gap: 20px;
 }
 
 .titulo {
@@ -48,7 +48,7 @@
 
 .contaCompras {
     background-color: var(--white);
-    height: 300px; 
+    height: 350px; 
     width: 304px;
     border-radius: 15px; 
     padding: 25px;       
