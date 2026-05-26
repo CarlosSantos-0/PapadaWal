@@ -40,7 +40,7 @@ export function CartProvider({ children }) {
     );
 }
 
-// hook
+// Hook
 export function useCart() {
     return useContext(CartContext);
 }
