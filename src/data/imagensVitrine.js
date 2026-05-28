@@ -49,7 +49,13 @@ export const vitrineDados = [
 ];
 
 export const fetchVitrine = async () => {
-    await new Promise(resolve => setTimeout(resolve, 300));
-    return vitrineDados
-}
-
+    const resposta = await fetch('http://127.0.0.1:8080/produtos');
+    
+    if (!resposta.ok) {
+        throw new Error('Falha ao conectar com o banco de dados!');
+    } else {console.log("Ok")}
+    
+    const jsonCompleto = await resposta.json();
+    
+    return jsonCompleto.itens;
+};
