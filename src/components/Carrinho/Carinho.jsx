@@ -1,5 +1,5 @@
 import styles from './styles.module.css';
-import { useCart } from '../../Context/CartContext'; // 1. Importando o nosso contexto!
+import { useCart } from '../../Context/CartContext'; 
 
 function Carrinho() {
     

@@ -1,98 +1,96 @@
-/* ===== TEMA ADAPTADO: PAPA DA WAL ===== */
+.centerWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 600px;
+    padding: 20px;
+    box-sizing: border-box;
+}
 
 .container {
-    width: 450px;
-    /* Trocamos o vermelho pelo fundo branco em formato de card */
+    width: 100%;             
+    max-width: 450px;
+    box-sizing: border-box;  
     background-color: #d3d3d3; 
-    border: none; /* Removemos a borda transparente */
-    padding: 40px;
-    border-radius: 15px; /* Mesmo arredondamento dos stepCards */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Mesma sombra suave do tema principal */
-    margin: 40px auto; /* Para centralizar na tela */
+    padding: 40px 30px;      
+    border-radius: 15px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
 }
 
 .container h1 {
     text-align: center;
     font-size: 30px;
-    color: #1b3a2b; /* Usando sua --primary-color */
+    color: #1b3a2b; 
     margin-bottom: 30px;
+    margin-top: 0;
 }
 
-.container .inputField {
+.inputField {
     position: relative;
     width: 100%;
-    height: 50px;
-    margin: 30px auto;
-    display: flex;
-    gap: 80px;
+    margin-bottom: 20px;
 }
 
 .inputField input {
-    width: 500px;
-    height: 10px;
-    background-color: #f4f7f5; /* Usando sua --bg-color */
+    width: 100%;
+    box-sizing: border-box;  
+    background-color: #f4f7f5; 
     outline: none;
-    border: 2px solid transparent; /* Borda invisível que aparece no hover/focus */
+    border: 2px solid transparent; 
     border-radius: 40px;
     font-size: 16px;
-    color: #333; /* --text-color */
-    padding: 20px 25px;
+    color: #333; 
+    padding: 15px 25px;
     transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
-/* Dá um feedback visual verde quando o usuário clica para digitar */
 .inputField input:focus {
-    border-color: #4CAF50; /* --accent-color */
+    border-color: #4CAF50; 
     background-color: #ffffff;
 }
 
 .inputField input::placeholder {
-    color: #666; /* Cor do seu subtitle */
+    color: #666; 
 }
 
-.inputField .icon {
-    position: absolute;
-    right: 25px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 18px;
-    color: #1b3a2b; /* --primary-color */
-}
-
-.container .recallForget {
+.recallForget {
     display: flex;
     justify-content: space-between;
-    font-size: 14.5px;
-    margin: -15px 0 15px;
+    align-items: center;
+    font-size: 14px;
+    margin: 15px 0 25px;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .recallForget label {
     color: #555;
     display: flex;
     align-items: center;
-    gap: 8px; /* Espaço entre o checkbox e o texto */
+    gap: 8px; 
+    cursor: pointer;
 }
 
 .recallForget input {
-    accent-color: #4CAF50; /* Deixa o checkbox verdinho com a cara do site */
+    accent-color: #4CAF50;
     cursor: pointer;
 }
 
 .recallForget a {
-    color: #1b3a2b; /* --primary-color */
+    color: #1b3a2b; 
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s;
 }
 
 .recallForget a:hover {
-    color: #4CAF50; /* --accent-color no hover */
+    color: #4CAF50; 
 }
 
 .container button {
     width: 100%;
-    height: 45px;
-    background-color: #1b3a2b; /* --primary-color */
+    height: 48px;            
+    background-color: #1b3a2b;
     color: #ffffff;
     border: none;
     outline: none;
@@ -104,16 +102,15 @@
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Efeito de interatividade no botão */
 .container button:hover {
-    background-color: #4CAF50; /* --accent-color */
-    transform: translateY(-2px); /* Dá uma leve levantadinha igual aos cards */
+    background-color: #4CAF50;
+    transform: translateY(-2px);
 }
 
-.container .signupLink {
+.signupLink {
     font-size: 15px;
     text-align: center;
-    margin: 20px 0 10px;
+    margin: 25px 0 0;
     color: #555;
 }
 
@@ -122,7 +119,7 @@
 }
 
 .signupLink p a {
-    color: #1b3a2b; /* --primary-color */
+    color: #1b3a2b; 
     font-weight: 600;
     margin-left: 5px;
     text-decoration: none;
@@ -130,6 +127,19 @@
 }
 
 .signupLink p a:hover {
-    color: #4CAF50; /* --accent-color */
+    color: #4CAF50; 
     text-decoration: underline;
+}
+
+/* Responsividade */
+
+@media (max-width: 480px) {
+    .container {
+        padding: 30px 20px;  
+        border-radius: 12px; 
+    }
+    
+    .container h1 {
+        font-size: 26px;     
+    }
 }
