@@ -48,7 +48,7 @@ export const vitrineDados = [
     }
 ];
 
-export const fetchVitrine = async () => {
+{/*export const fetchVitrine = async () => {
     const resposta = await fetch('http://127.0.0.1:8080/produtos');
     
     if (!resposta.ok) {
@@ -59,3 +59,10 @@ export const fetchVitrine = async () => {
     
     return jsonCompleto.itens;
 };
+*/}
+
+export const fetchVitrine = async () => {
+    await new Promise(resolve => setTimeout(resolve, 300));
+ 
+    return vitrineDados
+}

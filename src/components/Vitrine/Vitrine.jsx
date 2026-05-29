@@ -48,7 +48,7 @@ function Vitrine () {
             </div>
         )
     }
-
+    
     return (
         <>
             <div className={styles.vitrine}>
