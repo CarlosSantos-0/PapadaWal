@@ -1,5 +1,5 @@
 import './App.css'
-import Carrinho from './components/Carrinho/Carinho'
+import Carrinho from './components/Carrinho/Carrinho'
 import Envio from './components/Envio/Envio'
 import Footer from './components/Footer/Footer'
 import Login from './components/Login/Login'

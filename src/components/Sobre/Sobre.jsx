@@ -5,14 +5,11 @@ function Sobre() {
   return (
     <section className={styles.sobre}>
       
-      
       <div className={styles.container}>
-
        
         <div className={styles.imagem}>
           <img src={cozinheira} alt="Chef da Papa da Wal" />
         </div>
-      
        
         <div className={styles.container2}>
           

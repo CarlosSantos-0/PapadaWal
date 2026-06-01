@@ -27,8 +27,6 @@ function Main() {
                 </div>
         </div>*/}
 
-        
-        
         <div className={styles.main}>
             <div className={styles.heroSection}>
                 <div className={styles.titulo}>
@@ -69,9 +67,6 @@ function Main() {
                     </p>
                     <Link to="/produtos" className={styles.opcaoBtn}>Ver Cardápio</Link>
                 </div>
-
-               
-                
 
             </div>
 
