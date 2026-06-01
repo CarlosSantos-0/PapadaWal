@@ -59,7 +59,7 @@ function Footer() {
       </div>
 
       <div className={styles["footer-bottom"]}>
-        <p>&copy; 2026 Papa da Wall. Todos os direitos reservados.</p>
+        <p>&copy; {new Date().getFullYear()} Papa da Wall. Todos os direitos reservados.</p>
       </div>
     </footer>
   );
