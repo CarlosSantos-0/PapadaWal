@@ -38,6 +38,7 @@ As rotas já configuradas atualmente são:
 - `/sobre` para a página institucional.
 - `/log-in` para a tela de login.
 - `/carrinho` para o carrinho.
+- `/adm` acessa o painal admnistrativo (no momento apenas digitando na barra de navegação)
 
 ### Vitrine
 
