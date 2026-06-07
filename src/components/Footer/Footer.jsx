@@ -1,9 +1,9 @@
 import styles from '../Footer/styles.module.css'
 
-//Router para Links e navegação de pagina
-import { Link } from 'react-router-dom';
+// Router
+import { Link, useLocation } from 'react-router-dom';
 
-//Importe de Icones dnv
+//Icones
 import { FaHome } from "react-icons/fa";
 import { GiKnifeFork } from "react-icons/gi";
 import { FaComment } from "react-icons/fa";
@@ -11,8 +11,11 @@ import { FaWhatsapp } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
 
 function Footer() {
+  const location = useLocation();
+  const isAdmPage = location.pathname.startsWith('/adm');
+
   return (  
-    <footer className={styles["site-footer"]}>
+    <footer className={`${styles["site-footer"]} ${isAdmPage ? styles["no-margin"] : ""}`}>
       <div className={styles["footer-container"]}>
 
         <div className={styles["footer-col"]}>
@@ -30,7 +33,6 @@ function Footer() {
             </li>
             <li>
               <Link to="/produtos"><GiKnifeFork /> Produtos</Link>
-              
             </li>
             <li>
               <Link to="/sobre"><FaComment /> Sobre</Link>
