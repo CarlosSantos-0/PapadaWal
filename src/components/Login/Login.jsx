@@ -1,23 +1,37 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { useState } from 'react'  
-import styles from './styles.module.css'
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import styles from './styles.module.css';
 
 const Login = () => {
-  const [usarname, setUsername] = useState('')
-  const [password, setPassword] = useState('')
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  
+  const [erro, setErro] = useState(''); 
+  
+  const navigate = useNavigate(); 
 
   const handleSubmit = (event) => {
-    event.preventDefault()
-    alert("Enviando os dados: " + usarname + " - " + password)
-  }
+    event.preventDefault();
+    
+    const emailAdmin = "admin@papadawal.com";
+    const senhaAdmin = "admin123";
+
+    if (username === emailAdmin && password === senhaAdmin) {
+      setErro('');
+      navigate('/adm');
+    } else {
+      setErro('Usuário ou senha incorretos.');
+    }
+  };
 
   return (
-    // O id="center" mudou para classe do module para não herdar lixo global
     <section className={styles.centerWrapper}>
       <div className={styles.container}>
         <form onSubmit={handleSubmit}>
           <h1>Acesse o sistema</h1>
+
+          {/* Exibe a mensagem de erro em vermelho se o estado 'erro' estiver preenchido */}
+          {erro && <p style={{ color: 'red', textAlign: 'center', marginBottom: '10px' }}>{erro}</p>}
 
           <div className={styles.inputField}>
             <input
@@ -32,6 +46,7 @@ const Login = () => {
             <input
               type="password"
               placeholder="Senha"
+              required // Adicionei required aqui também
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
@@ -41,7 +56,6 @@ const Login = () => {
               <input type="checkbox" />
               Lembre de mim
             </label>
-            {/* Trocado para Link do react-router-dom */}
             <Link to="/recuperar-senha">Esqueceu a senha?</Link> 
           </div>
 
@@ -58,4 +72,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default Login;
