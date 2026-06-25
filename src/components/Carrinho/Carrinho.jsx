@@ -4,6 +4,7 @@ import { useCart } from '../../Context/CartContext';
 
 function Carrinho() {
     const { cart } = useCart();
+    
     const [resumo, setResumo] = useState({
         subtotal: 0,
         taxaEntrega: 0,
@@ -16,31 +17,41 @@ function Carrinho() {
             return;
         }
 
-        const dadosParaEnviar = cart.map(item => ({
-            id: item.id,
-            quantidade: item.quantidade
-        }));
+        const subtotalCalculado = cart.reduce((acc, item) => {
+            const precoFormatado = typeof item.preco === 'string'
+                ? parseFloat(item.preco.replace(',', '.'))
+                : item.preco;
+            return acc + (precoFormatado * item.quantidade);
+        }, 0);
 
-        fetch('http://127.0.0.1:8080/api/carrinho/calcular', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ itens: dadosParaEnviar })
-        })
-        .then(res => res.json())
-        .then(dados => {
-            if (dados.status === 'success') {
-                setResumo({
-                    subtotal: dados.valores.subtotal,
-                    taxaEntrega: dados.valores.taxa_entrega,
-                    total: dados.valores.total
-                });
-            }
-        })
-        .catch(err => console.error('Erro ao calcular no backend:', err));
+        const taxaFixa = 5.00; // Taxa de entrega fixa simulada
+        
+        setResumo({
+            subtotal: subtotalCalculado,
+            taxaEntrega: taxaFixa,
+            total: subtotalCalculado + taxaFixa
+        });
 
     }, [cart]);
+
+    const finalizarPedido = () => {
+        let texto = "Olá, Papa da Wal! Gostaria de finalizar o seguinte pedido:%0A%0A";
+        
+        cart.forEach(item => {
+            texto += `- ${item.quantidade}x ${item.nome}%0A`;
+        });
+
+        texto += `%0A*Subtotal:* R$ ${resumo.subtotal.toFixed(2)}`;
+        texto += `%0A*Taxa de Entrega:* R$ ${resumo.taxaEntrega.toFixed(2)}`;
+        texto += `%0A*TOTAL:* R$ ${resumo.total.toFixed(2)}%0A`;
+        texto += `%0A*Endereço:* Rua das Flores, 123 - Bragança Paulista`;
+        texto += `%0A*Pagamento:* PIX`;
+
+        const numeroWhatsApp = "5511999999999"; 
+        const link = `https://wa.me/${numeroWhatsApp}?text=${texto}`;
+        
+        window.open(link, '_blank');
+    };
 
     return (
         <>
@@ -53,6 +64,7 @@ function Carrinho() {
                 <div className={styles.produtosCompras}>
                     <div>
                         <h1>Itens do Pedido</h1>
+                        
                         {cart.length === 0 ? (
                             <p style={{ color: '#666' }}>Seu carrinho está vazio. Que tal adicionar algumas delícias?</p>
                         ) : (
@@ -89,7 +101,7 @@ function Carrinho() {
                     <div className={styles.caixaEnderco}>
                         <h1>Endereço de Entrega</h1>
                         <p style={{ margin: '5px 0' }}><strong>Rua das Flores, 123</strong></p>
-                        <p style={{ margin: 0, color: '#666' }}>Centro Bragança Paulista, SP. CEP 12900-000</p>
+                        <p style={{ margin: 0, color: '#666' }}>Bragança Paulista, SP. CEP 12900-000</p>
                     </div>
 
                     <div className={styles.caixaFormaPag}>
@@ -120,6 +132,7 @@ function Carrinho() {
                     <button
                         className={styles.btnFinalizar}
                         disabled={cart.length === 0}
+                        onClick={finalizarPedido}
                         style={{ opacity: cart.length === 0 ? 0.5 : 1, cursor: cart.length === 0 ? 'not-allowed' : 'pointer' }}
                     >
                         Finalizar Pedido

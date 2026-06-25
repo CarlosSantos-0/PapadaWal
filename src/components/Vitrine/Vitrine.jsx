@@ -4,7 +4,7 @@ import styles from '../Vitrine/styles.module.css'
 import { vitrineDados, fetchVitrine } from '../../data/imagensVitrine'
 import { useQuery } from '@tanstack/react-query'
 
-//Router
+// Router
 import { Link } from 'react-router-dom'
 
 // Contexto
@@ -14,11 +14,11 @@ function Vitrine () {
     const { data, isLoading, isError, error } = useQuery({
         queryKey: ['produtos'],
         queryFn: fetchVitrine,
+        retry: false, 
     })
 
-    {/* Acessando a função de adicionar ao carrinho do contexto */}
-    const { addToCart } = useCart()
 
+    const { addToCart } = useCart()
     const produtos = data ?? vitrineDados
 
     if (isLoading) {
@@ -35,26 +35,14 @@ function Vitrine () {
         )
     }
 
-    if (isError) {
-        return (
-            <div className={styles.vitrine}>
-                <div className={styles.textosVitrine}>
-                    <h1 className={styles.titulo}>Nosso Cardápio</h1>
-                    <h3 className={styles.subTitulo}>Escolha suas marmitas favoritas</h3>
-                </div>
-                <div className={styles.vitrine_produtos}>
-                    <p>Erro ao carregar produtos: {error?.message ?? 'Erro desconhecido'}</p>
-                </div>
-            </div>
-        )
-    }
-
     return (
         <>
             <div className={styles.vitrine}>
                 <div className={styles.textosVitrine}>
                     <h1 className={styles.titulo}>Nosso Cardápio</h1>
                     <h3 className={styles.subTitulo}>Escolha dos nossos produtos</h3>
+                    
+                    {isError && <p style={{color: 'orange', fontSize: '0.8rem'}}>Aviso: Usando dados locais (API offline).</p>}
                 </div>
 
                 <div className={styles.vitrine_produtos}>
@@ -69,7 +57,9 @@ function Vitrine () {
 
                                 <div className={styles.rodapeProduto}>
                                     <span className={styles.preco}>R$ {produto.preco}</span>
-                                    <button onClick={() => {addToCart(produto)}} className={styles.botaoComprar}>Adicionar ao Carrinho</button>
+                                    <button onClick={() => {addToCart(produto)}} className={styles.botaoComprar}>
+                                        Adicionar ao Carrinho
+                                    </button>
                                 </div>
                             </div>
                         </div>
